@@ -14,5 +14,6 @@ with sample data, and generating reports
 **3. Physical Model**
 - Define Datatypes and Constraints
 - Check Constraints
-## Phase 2
-## Phase 3
+## Phase 2: Data Implementation
+## Phase 3: SQL Queries and Reporting
+## Phase 4: Presentation
