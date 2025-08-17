@@ -1,0 +1,13 @@
+advisory_id,short_desc,long_desc
+1,Coarse Language,"Contains profanity, slurs, or sexual innuendo that may not be suitable for younger viewers."
+2,Frightening Scenes,Includes suspenseful or scary images that may alarm sensitive viewers.
+3,Not Recommended for Young Children,May include themes or imagery inappropriate or distressing for young children.
+4,Mature Theme,"Addresses complex themes like death, racism, or domestic issues that may require parental context."
+5,Substance Abuse,"Depicts use of alcohol, drugs, or tobacco in contexts that may influence behaviors."
+6,Gory Scenes,"Graphic visual content including blood, tissue damage, or explicit injury."
+7,Explicit Sexual Content,Contains clear sexual acts or full nudity in detailed or realistic portrayal.
+8,Brutal Violence,Features extremely intense or graphic portrayals of violence or torture.
+9,Sexual Violence,Depicts non-consensual or degrading sexual behavior or assault.
+10,Language May Offend,Contains language or epithets that may be offensive to particular groups.
+11,Crude Content,Crass humor or themes that may be unsettling due to poor taste or explicitness.
+12,Disturbing Tone,Overall unsettling or uncomfortable atmosphere that may emotionally impact some viewers.
