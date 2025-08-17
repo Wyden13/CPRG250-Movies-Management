@@ -20,4 +20,12 @@ with sample data, and generating reports
 - Generated sample data (.csv) using ChatGPT (1000 actors, 1000 directors, 1000 movies, 1000 wishlists, 1000 rentals, 1000 customers), Categories and Advisories based on https://www.alberta.ca/how-alberta-classifies-films.aspx
 - Implemented a Python file that pulls the sample data and populates existing tables
 ## Phase 3: SQL Queries and Reporting
+- Created 7 SQL files that manipulate existing tables into reports
+**SQL Concepts:**
+- Joins – Combining data from multiple tables
+- Single-row functions – Applying functions to individual rows
+- Restricting and sorting data – Filtering and ordering results
+- Group functions – Aggregating data (e.g., COUNT, AVG)
+- OLAP – Analytical queries
+- Subqueries – Using queries within queries
 ## Phase 4: Presentation
