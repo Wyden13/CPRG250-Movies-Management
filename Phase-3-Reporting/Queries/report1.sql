@@ -1,18 +1,19 @@
 -- CPRG 250 PROJECT 2 --
 -- Phase three: SQL Queries and Reporting -- 
--- Report 1: Revenue by Category with Grand Totals--
--- Purpose: Sum rental revenue by content category, with category totals and a grand total.
--- Concepts: GROUPING SETS, GROUP BY, SUM, COUNT--
--- Author: Hoang Phuong Uyen Nguyen -- 
+-- Report 1: Customer Rentals with Movie & Price --
+-- Purpose: Show each rental with who rented it, what movie, and what they paid. --
+-- Concepts: Joins, Sorting --
+-- Author: --
 
-select
-	c.category_id,
-	COALESCE(c.category_name, 'Grand Total') AS category_name,
-	COUNT(r.rental_id) AS "rental_count",
-	SUM(r.price_paid)::numeric(12,2) AS "revenue"
-from rental r
-join movie m on r.movie_id = m.movie_id
-join movie_category mc on m.movie_id = mc.movie_id
-join category c on mc.category_id = c.category_id
-GROUP BY GROUPING SETS ((c.category_id,c.category_name),())
-ORDER BY c.category_id ASC;
+SELECT r.rental_id,
+       c.customer_id,
+       c.first_name || ' ' || c.last_name AS customer_name,
+       m.movie_id,
+       m.title,
+       r.start_view_date,
+       r.expiry_date,
+       r.price_paid
+FROM rental r
+JOIN customer c ON c.customer_id = r.customer_id
+JOIN movie    m ON m.movie_id    = r.movie_id
+ORDER BY r.start_view_date DESC;
