@@ -21,6 +21,7 @@ with sample data, and generating reports
 - Implemented a Python file that pulls the sample data and populates existing tables
 ## Phase 3: SQL Queries and Reporting
 - Created 7 SQL files that manipulate existing tables into reports
+  
 **SQL Concepts:**
 - Joins – Combining data from multiple tables
 - Single-row functions – Applying functions to individual rows
