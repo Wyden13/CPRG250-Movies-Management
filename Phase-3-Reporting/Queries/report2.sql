@@ -1,0 +1,6 @@
+-- CPRG 250 PROJECT 2 --
+-- Phase three: SQL Queries and Reporting -- 
+-- Report 2: Finds numbers of movies each director directed--
+-- Purpose: Count numbers of movies directed by each director--
+-- Concepts: COUNT(group), ORDER BY(restrict/sort)--
+-- Author: Hoang Phuong Uyen Nguyen -- 

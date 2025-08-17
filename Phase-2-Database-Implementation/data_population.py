@@ -10,9 +10,9 @@ def populate_database():
         port=5432
     )
     cur = conn.cursor()
-    # Delete all the data
+    # # Delete all the data
     truncate_tables = f"""
-    TRUNCATE MovieAdvisory, MovieDirector, MovieCategory, MovieActor, Wishlist, Rental, Customer, Movie, Advisory, Director, Category, Actor CASCADE;
+    TRUNCATE Movie_Advisory, Movie_Director, Movie_Category, Movie_Actor, Wishlist, Rental, Customer, Movie, Advisory, Director, Category, Actor CASCADE;
     """
     cur.execute(truncate_tables)
     conn.commit()
@@ -37,10 +37,10 @@ def populate_database():
         conn.commit()
 
     # Child tables
-    pathntable_child = {'sample-data\\bridges\\MovieCategory_Links.csv':'moviecategory', 
-                    'sample-data\\bridges\\MovieActor_Links.csv':'movieactor',
-                    'sample-data\\bridges\\MovieAdvisory_Links.csv':'movieadvisory',
-                    'sample-data\\bridges\\MovieDirector_Links.csv':'moviedirector'}
+    pathntable_child = {'sample-data\\bridges\\MovieCategory_Links.csv':'Movie_Category', 
+                    'sample-data\\bridges\\MovieActor_Links.csv':'Movie_Actor',
+                    'sample-data\\bridges\\MovieAdvisory_Links.csv':'Movie_Advisory',
+                    'sample-data\\bridges\\MovieDirector_Links.csv':'Movie_Director'}
     for path, table in pathntable_child.items():
         copy_sql = f"""
             COPY {table} FROM STDIN WITH CSV
