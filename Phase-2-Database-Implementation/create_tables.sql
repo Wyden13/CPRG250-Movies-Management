@@ -4,10 +4,10 @@
 -- Author: Hoang Phuong Uyen Nguyen --
 
 --Delete all existing tables from public
-DROP TABLE IF EXISTS MovieAdvisory CASCADE;
-DROP TABLE IF EXISTS MovieDirector CASCADE;
-DROP TABLE IF EXISTS MovieCategory CASCADE;
-DROP TABLE IF EXISTS MovieActor CASCADE;
+DROP TABLE IF EXISTS Movie_Advisory CASCADE;
+DROP TABLE IF EXISTS Movie_Director CASCADE;
+DROP TABLE IF EXISTS Movie_Category CASCADE;
+DROP TABLE IF EXISTS Movie_Actor CASCADE;
 DROP TABLE IF EXISTS Wishlist CASCADE;
 DROP TABLE IF EXISTS Rental CASCADE;
 DROP TABLE IF EXISTS Customer CASCADE;
@@ -45,7 +45,7 @@ CREATE TABLE Director (
 	first_name VARCHAR(100),
 	last_name VARCHAR(100),
 	date_of_birth DATE,
-	email VARCHAR(255) UNIQUE,
+	email VARCHAR(255) UNIQUE
 );
 -- CATEGORY
 CREATE TABLE Category (
@@ -100,25 +100,25 @@ CREATE TABLE Wishlist (
 -- CHILD TABLES
 
 -- Movie - Advisory
-CREATE TABLE MovieAdvisory (
+CREATE TABLE Movie_Advisory (
 	movie_id INT, --fk from Movie
 	advisory_id INT, --fk from Advisory
 	PRIMARY KEY(movie_id,advisory_id)
 );
 -- Movie - Director
-CREATE TABLE MovieDirector (
+CREATE TABLE Movie_Director (
 	director_id INT, -- fk from Director
 	movie_id INT, -- fk from Movie
 	PRIMARY KEY(director_id,movie_id)
 );
 -- Movie Category
-CREATE TABLE MovieCategory (
+CREATE TABLE Movie_Category (
 	movie_id INT, -- fk from Movie
 	category_id INT, -- fk from Category
 	PRIMARY KEY(movie_id,category_id)
 );
 -- Movie Actor
-CREATE TABLE MovieActor (
+CREATE TABLE Movie_Actor (
 	movie_id INT, -- fk from Movie
 	actor_id INT, -- fk from Actor
 	role_name VARCHAR(255),
@@ -145,22 +145,22 @@ ADD CONSTRAINT fk_wishlist_customer FOREIGN KEY (customer_id) REFERENCES Custome
 ADD CONSTRAINT fk_wishlist_movie    FOREIGN KEY (movie_id)    REFERENCES Movie(movie_id);
 
 -- MovieAdvisory -> (Movie, Advisory)
-ALTER TABLE MovieAdvisory
+ALTER TABLE Movie_Advisory
 ADD CONSTRAINT fk_movieadvisory_movie    FOREIGN KEY (movie_id)    REFERENCES Movie(movie_id),
 ADD CONSTRAINT fk_movieadvisory_advisory FOREIGN KEY (advisory_id) REFERENCES Advisory(advisory_id);
 
--- MovieDirector -> (Movie, Director)
-ALTER TABLE MovieDirector
+-- Movie_Director -> (Movie, Director)
+ALTER TABLE Movie_Director
 ADD CONSTRAINT fk_moviedirector_movie    FOREIGN KEY (movie_id)    REFERENCES Movie(movie_id),
 ADD CONSTRAINT fk_moviedirector_director FOREIGN KEY (director_id) REFERENCES Director(director_id);
 
--- MovieCategory -> (Movie, Category)
-ALTER TABLE MovieCategory
+-- Movie_Category -> (Movie, Category)
+ALTER TABLE Movie_Category
 ADD CONSTRAINT fk_moviecategory_movie    FOREIGN KEY (movie_id)    REFERENCES Movie(movie_id),
 ADD CONSTRAINT fk_moviecategory_category FOREIGN KEY (category_id) REFERENCES Category(category_id);
 
--- MovieActor -> (Movie, Actor) 
-ALTER TABLE MovieActor
+-- Movie_Actor -> (Movie, Actor) 
+ALTER TABLE Movie_Actor
 ADD CONSTRAINT fk_movieactor_movie FOREIGN KEY (movie_id) REFERENCES Movie(movie_id),
 ADD CONSTRAINT fk_movieactor_actor FOREIGN KEY (actor_id) REFERENCES Actor(actor_id);
 
