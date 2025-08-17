@@ -1,4 +1,4 @@
--- CPRG 250 PROJECT 2--
+-- CPRG 250 --
 -- Phase two: Data Implementation -- 
 -- Create tables --
 -- Author: Hoang Phuong Uyen Nguyen --

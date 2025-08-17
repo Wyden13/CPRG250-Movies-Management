@@ -1,0 +1,82 @@
+category_id,category_name,parent_category_id
+1,Movies,
+2,New Releases,1
+3,Most Popular,1
+4,Coming Soon,1
+5,Action & Adventure,1
+6,Comedy,1
+7,Drama,1
+8,Romance,1
+9,Thriller,1
+10,Horror,1
+11,Sci-Fi & Fantasy,1
+12,Crime & Mystery,1
+13,Classics,1
+14,Family Movies,1
+15,Animated Movies,1
+16,TV Shows,
+17,Reality,16
+18,Comedy Series,16
+19,Drama Series,16
+20,Crime Shows,16
+21,Mini-Series,16
+22,Talk Shows,16
+23,Cooking Shows,16
+24,Travel Shows,16
+25,Sports,
+26,Live Sports,25
+27,Highlights,25
+28,Documentaries,25
+29,Extreme Sports,25
+30,Martial Arts,25
+31,Wrestling,25
+32,Soccer,25
+33,Basketball,25
+34,Hockey,25
+35,Football,25
+36,Kids & Family,
+37,Cartoons,36
+38,Animated Movies,36
+39,Family Series,36
+40,Educational,36
+41,Kids Classics,36
+42,Disney Collection,36
+43,Documentaries,
+44,Nature,43
+45,History,43
+46,Science & Technology,43
+47,True Crime,43
+48,Biography,43
+49,Cultural,43
+50,Music & Concerts,
+51,Concerts,50
+52,Music Videos,50
+53,Pop,50
+54,Rock,50
+55,Hip-Hop,50
+56,Country,50
+57,Classical,50
+58,Lifestyle,
+59,Home & Garden,58
+60,Cooking,58
+61,Travel,58
+62,Fashion,58
+63,Health & Fitness,58
+64,News & Talk,
+65,News,64
+66,Politics,64
+67,Interviews,64
+68,Late Night Shows,64
+69,Specials,
+70,Holiday Specials,69
+71,Award Shows,69
+72,Stand-up Comedy,69
+73,Events,69
+74,Exclusive Premieres,69
+75,International,
+76,Bollywood,75
+77,K-Dramas,75
+78,Anime,75
+79,European Cinema,75
+80,Latin American,75
+81,World Documentaries,75
