@@ -11,10 +11,6 @@
         <item-type type-id="erd-entity" type="Entity" />
         <value>12</value>
       </counter>
-      <counter>
-        <item-type type="Unknown" />
-        <value>1</value>
-      </counter>
     </entity-names>
     <entity-ids>
       <counter>
@@ -76,6 +72,16 @@
         <description />
         <color>#00000000</color>
         <working-schedule uid="ws-6dcc83e451f5426e91d2b1943c9daa45" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+      </person>
+      <person id="">
+        <first-name>Nguyen</first-name>
+        <last-name>Uyen</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+        <working-schedule uid="ws-b38f4da00a29486e8fe3c56c9a056655" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
       </person>
       <person id="">
         <first-name>Nguyen</first-name>
@@ -260,13 +266,13 @@
               <attribute-pairs />
             </erd-relation>
           </item>
-          <item id="b6698dbd09e2408886736042f15ad5a0" cid="ENT007" type="erd-entity" name="Director" creator="" creation-date="08/10/2025 14:10:03">
-            <entity description="" />
-          </item>
           <item id="d2065c0147ec4bab967cc6d8d103ad93" cid="REL002" type="erd-relationship" name="subcategories" creator="" creation-date="08/10/2025 15:19:54" from="8d8f36aae0e44b9fa9cd99ed17b140d6" to="8d8f36aae0e44b9fa9cd99ed17b140d6">
             <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="0..*">
               <attribute-pairs />
             </erd-relation>
+          </item>
+          <item id="b6698dbd09e2408886736042f15ad5a0" cid="ENT007" type="erd-entity" name="Director" creator="" creation-date="08/10/2025 14:10:03">
+            <entity description="" />
           </item>
           <item id="bc435e32f8ed40c481e4b0622df02b83" cid="ENT006" type="erd-entity" name="ActorMovie" creator="" creation-date="08/10/2025 14:09:14">
             <entity description="" />
@@ -308,21 +314,21 @@
               <attribute-pairs />
             </erd-relation>
           </item>
+          <item id="0db9aa74d85144a6bfc8b0388cc3565d" cid="ENT008" type="erd-entity" name="Customer" creator="" creation-date="08/10/2025 14:10:09">
+            <entity description="" />
+          </item>
           <item id="0fc9324f22ed405cb7f731985ef83d04" cid="REL015" type="erd-relationship" creator="" creation-date="08/10/2025 15:57:32" from="bc4d8a9672fe41d18079668da38b79d8" to="bc435e32f8ed40c481e4b0622df02b83">
             <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="0..*" start-role="features">
               <attribute-pairs />
             </erd-relation>
           </item>
-          <item id="0db9aa74d85144a6bfc8b0388cc3565d" cid="ENT008" type="erd-entity" name="Customer" creator="" creation-date="08/10/2025 14:10:09">
-            <entity description="" />
-          </item>
-          <item id="68ba3f69bd16437e8ed39d6c34f5ec18" cid="ENT004" type="erd-entity" name="Rental" creator="" creation-date="08/10/2025 14:08:43">
-            <entity description="" />
-          </item>
           <item id="01b784252eaf481e99e053552aaf7a7b" cid="REL019" type="erd-relationship" creator="" creation-date="08/10/2025 16:00:23" from="8d8f36aae0e44b9fa9cd99ed17b140d6" to="bc4d8a9672fe41d18079668da38b79d8">
             <erd-relation type="Identifying" multiplicity-from="*" multiplicity-to="*" start-role="categorizes" end-role="is associated with">
               <attribute-pairs />
             </erd-relation>
+          </item>
+          <item id="68ba3f69bd16437e8ed39d6c34f5ec18" cid="ENT004" type="erd-entity" name="Rental" creator="" creation-date="08/10/2025 14:08:43">
+            <entity description="" />
           </item>
           <item id="df0ea5524e8143ff93675bee717ca94a" cid="REL021" type="erd-relationship" creator="" creation-date="08/10/2025 16:03:38" from="68ba3f69bd16437e8ed39d6c34f5ec18" to="bc4d8a9672fe41d18079668da38b79d8">
             <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="*" start-role="rents" end-role="is rented">
@@ -484,7 +490,7 @@
         <abstract-items />
         <layer id="0f7964dfdbad43048293fd84d355dfbf" name="Default" visible="true" enabled="true" locked="false" />
       </diagram>
-      <diagram type="entity-relationship" id="p87395cabcf8e48b9953fa9eeaa21f318_667145189" name="EntityRelationshipDiagram2" order-index="4" overview-order-index="2" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="-569,-382">
+      <diagram type="entity-relationship" id="p87395cabcf8e48b9953fa9eeaa21f318_667145189" name="EntityRelationshipDiagram2" order-index="4" overview-order-index="2" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="-305,-326" zoom="0.8">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -573,7 +579,7 @@ advisory (FK)
             <comment>- default_credit_card_type: IN ('AX','MC','VS')
 - postal_code: FORMAT(L9L9L9) - L is a letter and 9 is a digit
 - phone_number: format(999.999.9999)
-- email: format(</comment>
+- email: format('%.__@__%.__%')</comment>
           </item>
           <item id="7909152f90944312b1f7510d0ab45efe" cid="ENT010" type="erd-entity" name="MovieCategory" creator="" creation-date="08/10/2025 16:50:18">
             <entity description="" />
@@ -630,16 +636,16 @@ category_id(FK)</comment>
               <attribute-pairs />
             </erd-relation>
           </item>
+          <item id="f92b66651ccf4d8498669e19aa56ae55" cid="CMT006" type="comment" creator="" creation-date="08/16/2025 18:38:13">
+            <comment>composite key:
+movie_id (FK)
+director_id (FK)</comment>
+          </item>
           <item id="3011ff94a19140778fdf828d39a6e755" cid="CMT011" type="comment" style-class="Flat Orange" creator="" creation-date="08/16/2025 21:27:45">
             <style class="Flat Orange" />
             <comment>check constraints:
 duration_minutes &gt; 0
 </comment>
-          </item>
-          <item id="f92b66651ccf4d8498669e19aa56ae55" cid="CMT006" type="comment" creator="" creation-date="08/16/2025 18:38:13">
-            <comment>composite key:
-movie_id (FK)
-director_id (FK)</comment>
           </item>
         </abstract-items>
         <layer id="e870dab183bd42cc9733b7204add967d" name="Default" visible="true" enabled="true" locked="false">
