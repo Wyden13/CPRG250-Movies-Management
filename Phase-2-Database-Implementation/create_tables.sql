@@ -45,7 +45,7 @@ CREATE TABLE Director (
 	first_name VARCHAR(100),
 	last_name VARCHAR(100),
 	date_of_birth DATE,
-	email VARCHAR(255)
+	email VARCHAR(255) UNIQUE,
 );
 -- CATEGORY
 CREATE TABLE Category (
@@ -82,8 +82,11 @@ CREATE TABLE Customer (
 	email VARCHAR(255) CHECK (email ~ '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'),
 	default_credit_card_num VARCHAR(20),
 	credit_card_type CHAR(2) CHECK(credit_card_type IN ('AX','MC','VS')),
-	address VARCHAR(255),
-	postal_code CHAR(6)CHECK (postal_code ~ '^[A-Za-z][0-9][A-Za-z][0-9][A-Za-z][0-9]$') ,
+	addressLine VARCHAR(255),
+	city VARCHAR(100),
+	province VARCHAR(100),
+	country VARCHAR(100),
+	postal_code CHAR(6) CHECK (postal_code ~ '^[A-Za-z][0-9][A-Za-z][0-9][A-Za-z][0-9]$'),
 	phone_number CHAR(12) CHECK (phone_number ~ '^[0-9]{3}\.[0-9]{3}\.[0-9]{4}$')
 );
 -- WISHLIST
@@ -156,8 +159,17 @@ ALTER TABLE MovieCategory
 ADD CONSTRAINT fk_moviecategory_movie    FOREIGN KEY (movie_id)    REFERENCES Movie(movie_id),
 ADD CONSTRAINT fk_moviecategory_category FOREIGN KEY (category_id) REFERENCES Category(category_id);
 
--- MovieActor -> (Movie, Actor)  ✅ FIXED TARGET TABLE
+-- MovieActor -> (Movie, Actor) 
 ALTER TABLE MovieActor
 ADD CONSTRAINT fk_movieactor_movie FOREIGN KEY (movie_id) REFERENCES Movie(movie_id),
 ADD CONSTRAINT fk_movieactor_actor FOREIGN KEY (actor_id) REFERENCES Actor(actor_id);
 
+-- Unique Constraints
+ALTER TABLE Customer
+ADD CONSTRAINT unique_customer_email UNIQUE (email);
+
+ALTER TABLE Actor
+ADD CONSTRAINT unique_actor_email UNIQUE (email);
+
+ALTER TABLE Director
+ADD CONSTRAINT unique_director_email UNIQUE (email);
