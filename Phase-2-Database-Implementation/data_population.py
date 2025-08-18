@@ -20,7 +20,7 @@ def populate_database():
     pathntable = {'sample-data\\actors.csv':'actor', 
                 'sample-data\\movies.csv':'movie', 
                 'sample-data\\advisories.csv':'advisory',
-                'sample-data\\ShawVOD_Categories.csv':'category',
+                'sample-data\\categories.csv':'category',
                 'sample-data\\directors.csv':'director',
                 'sample-data\\customers.csv':'customer',
                 'sample-data\\rentals.csv' :'rental',
@@ -37,10 +37,10 @@ def populate_database():
         conn.commit()
 
     # Child tables
-    pathntable_child = {'sample-data\\bridges\\MovieCategory_Links.csv':'Movie_Category', 
-                    'sample-data\\bridges\\MovieActor_Links.csv':'Movie_Actor',
-                    'sample-data\\bridges\\MovieAdvisory_Links.csv':'Movie_Advisory',
-                    'sample-data\\bridges\\MovieDirector_Links.csv':'Movie_Director'}
+    pathntable_child = {'sample-data\\bridges\\Movie_Category.csv':'Movie_Category', 
+                    'sample-data\\bridges\\Movie_Actor.csv':'Movie_Actor',
+                    'sample-data\\bridges\\Movie_Advisory.csv':'Movie_Advisory',
+                    'sample-data\\bridges\\Movie_Director.csv':'Movie_Director'}
     for path, table in pathntable_child.items():
         copy_sql = f"""
             COPY {table} FROM STDIN WITH CSV
