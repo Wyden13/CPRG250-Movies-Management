@@ -25,7 +25,6 @@ def populate_database():
                 'sample-data\\customers.csv':'customer',
                 'sample-data\\rentals.csv' :'rental',
                 'sample-data\\wishlists.csv':'wishlist',
-
                 }
     for path, table in pathntable.items():
         copy_sql = f"""
@@ -38,9 +37,9 @@ def populate_database():
 
     # Child tables
     pathntable_child = {'sample-data\\bridges\\Movie_Category.csv':'Movie_Category', 
-                    'sample-data\\bridges\\Movie_Actor.csv':'Movie_Actor',
                     'sample-data\\bridges\\Movie_Advisory.csv':'Movie_Advisory',
-                    'sample-data\\bridges\\Movie_Director.csv':'Movie_Director'}
+                    'sample-data\\bridges\\Movie_Actor.csv':'Movie_Actor',
+                    'sample-data\\bridges\\Movie_Director_FIXED.csv':'Movie_Director'}
     for path, table in pathntable_child.items():
         copy_sql = f"""
             COPY {table} FROM STDIN WITH CSV

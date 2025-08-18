@@ -67,7 +67,7 @@ CREATE TABLE Rental (
 	customer_id INT, -- fk from Customer
 	movie_id INT , -- fk from Movie
 	rental_date DATE,
-	start_view_date DATE CHECK (start_view_date > rental_date),
+	start_view_date DATE CHECK (start_view_date >= rental_date),
 	expiry_date DATE CHECK (expiry_date > start_view_date),
 	price_paid DECIMAL(10,2),
 	credit_card_num VARCHAR(20),
@@ -126,6 +126,15 @@ CREATE TABLE Movie_Actor (
 );
 
 -- CONSTRAINTS
+-- Unique Constraints
+ALTER TABLE Customer
+ADD CONSTRAINT unique_customer_email UNIQUE (email);
+
+ALTER TABLE Actor
+ADD CONSTRAINT unique_actor_email UNIQUE (email);
+
+ALTER TABLE Director
+ADD CONSTRAINT unique_director_email UNIQUE (email);
 
 -- Foreign keys  
 
@@ -137,26 +146,21 @@ FOREIGN KEY (parent_category_id) REFERENCES Category(category_id);
 -- Rental -> (Customer, Movie)
 ALTER TABLE Rental
 ADD CONSTRAINT fk_rental_customer FOREIGN KEY (customer_id) REFERENCES Customer(customer_id),
-ADD CONSTRAINT fk_rental_movie    FOREIGN KEY (movie_id)    REFERENCES Movie(movie_id);
+ADD CONSTRAINT fk_rental_movie FOREIGN KEY (movie_id) REFERENCES Movie(movie_id);
 
 -- Wishlist -> (Customer, Movie)
 ALTER TABLE Wishlist
 ADD CONSTRAINT fk_wishlist_customer FOREIGN KEY (customer_id) REFERENCES Customer(customer_id),
-ADD CONSTRAINT fk_wishlist_movie    FOREIGN KEY (movie_id)    REFERENCES Movie(movie_id);
+ADD CONSTRAINT fk_wishlist_movie FOREIGN KEY (movie_id) REFERENCES Movie(movie_id);
 
 -- MovieAdvisory -> (Movie, Advisory)
 ALTER TABLE Movie_Advisory
-ADD CONSTRAINT fk_movieadvisory_movie    FOREIGN KEY (movie_id)    REFERENCES Movie(movie_id),
+ADD CONSTRAINT fk_movieadvisory_movie FOREIGN KEY (movie_id) REFERENCES Movie(movie_id),
 ADD CONSTRAINT fk_movieadvisory_advisory FOREIGN KEY (advisory_id) REFERENCES Advisory(advisory_id);
-
--- Movie_Director -> (Movie, Director)
-ALTER TABLE Movie_Director
-ADD CONSTRAINT fk_moviedirector_movie    FOREIGN KEY (movie_id)    REFERENCES Movie(movie_id),
-ADD CONSTRAINT fk_moviedirector_director FOREIGN KEY (director_id) REFERENCES Director(director_id);
 
 -- Movie_Category -> (Movie, Category)
 ALTER TABLE Movie_Category
-ADD CONSTRAINT fk_moviecategory_movie    FOREIGN KEY (movie_id)    REFERENCES Movie(movie_id),
+ADD CONSTRAINT fk_moviecategory_movie FOREIGN KEY (movie_id) REFERENCES Movie(movie_id),
 ADD CONSTRAINT fk_moviecategory_category FOREIGN KEY (category_id) REFERENCES Category(category_id);
 
 -- Movie_Actor -> (Movie, Actor) 
@@ -164,12 +168,7 @@ ALTER TABLE Movie_Actor
 ADD CONSTRAINT fk_movieactor_movie FOREIGN KEY (movie_id) REFERENCES Movie(movie_id),
 ADD CONSTRAINT fk_movieactor_actor FOREIGN KEY (actor_id) REFERENCES Actor(actor_id);
 
--- Unique Constraints
-ALTER TABLE Customer
-ADD CONSTRAINT unique_customer_email UNIQUE (email);
-
-ALTER TABLE Actor
-ADD CONSTRAINT unique_actor_email UNIQUE (email);
-
-ALTER TABLE Director
-ADD CONSTRAINT unique_director_email UNIQUE (email);
+-- Movie_Director -> (Movie, Director)
+ALTER TABLE Movie_Director
+ADD CONSTRAINT fk_moviedirector_movie FOREIGN KEY (movie_id) REFERENCES Movie(movie_id);
+ADD CONSTRAINT fk_moviedirector_director FOREIGN KEY (director_id) REFERENCES Director(director_id);
