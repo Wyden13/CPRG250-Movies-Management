@@ -1,7 +1,7 @@
 -- CPRG 250 PROJECT 2 --
 -- Phase three: SQL Queries and Reporting -- 
 -- Report 6: Customers Above Average Rentals --
--- Purpose: Identify customers whose rental activity is above the overall average. --
+-- Desc: Identify customers whose rental activity is above the overall average. --
 -- Concepts: GROUP BY, Subquery with aggregate, Comparison --
 -- Author: Hoang Phuong Uyen Nguyen --
 
@@ -19,6 +19,6 @@ WHERE x.cnt > (
     SELECT customer_id, COUNT(*)::int AS cnt
     FROM rental
     GROUP BY customer_id
-  ) t
+  )
 )
 ORDER BY x.cnt DESC, customer_name;

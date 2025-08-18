@@ -1,7 +1,7 @@
 -- CPRG 250 PROJECT 2 --
 -- Phase three: SQL Queries and Reporting -- 
--- Report 6: Revenue by Category with Grand Totals--
--- Purpose: Sum rental revenue by content category, with category totals and a grand total.
+-- Report 5: Revenue by Category with Grand Totals--
+-- Desc: Sum rental revenue by content category, with category totals and a grand total.
 -- Concepts: OLAP(GROUPING SETS), GROUP BY, SUM, COUNT--
 -- Author: Hoang Phuong Uyen Nguyen -- 
 

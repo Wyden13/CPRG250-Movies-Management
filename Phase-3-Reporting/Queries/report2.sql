@@ -1,19 +1,15 @@
 -- CPRG 250 PROJECT 2 --
 -- Phase three: SQL Queries and Reporting -- 
--- Report 1: Customer Rentals with Movie & Price --
--- Purpose: Show each rental with who rented it, what movie, and what they paid. --
--- Concepts: Joins, Sorting --
+-- Report 2: Monthly Rental Counts --
+-- Desc: Counts the number of rentals per month (with year) --
+-- Concepts: EXTRACT, GROUP BY, COUNT, SUM --
 -- Author: Hoang Phuong Uyen Nguyen --
 
-SELECT r.rental_id,
-       c.customer_id,
-       CONCAT(c.first_name, ' ', c.last_name) AS customer_name,
-       m.movie_id,
-       m.title,
-       r.start_view_date,
-       r.expiry_date,
-       r.price_paid
+SELECT 
+    EXTRACT(YEAR FROM r.rental_date) AS rental_year,
+    EXTRACT(MONTH FROM r.rental_date) AS rental_month,
+    COUNT(r.rental_id) AS rental_count,
+    SUM(r.price_paid) AS total_revenue
 FROM rental r
-JOIN customer c ON c.customer_id = r.customer_id
-JOIN movie    m ON m.movie_id    = r.movie_id
-ORDER BY r.start_view_date DESC;
+GROUP BY rental_year, rental_month
+ORDER BY rental_year, rental_month;
