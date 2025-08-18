@@ -29,5 +29,6 @@ with sample data, and generating reports
 - Group functions – Aggregating data (e.g., COUNT, AVG)
 - OLAP – Analytical queries
 - Subqueries – Using queries within queries
+
 **4. Presentation**
   DEMO:
