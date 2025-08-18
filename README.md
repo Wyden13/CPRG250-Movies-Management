@@ -17,7 +17,7 @@ with sample data, and generating reports
 ## Phase 2: Data Implementation
 - Using PostgreSQL
 - SQL files which use CREATE TABLE to make tables following the Physical model
-- Generated sample data (.csv) using ChatGPT (1000 actors, 1000 directors, 1000 movies, 1000 wishlists, 1000 rentals, 1000 customers), Categories and Advisories based on https://www.alberta.ca/how-alberta-classifies-films.aspx
+- Generated sample data (.csv) using ChatGPT (150 actors, 100 directors, 300 movies, 400 wishlists, 500 rentals, 200 customers), Categories and Advisories based on https://www.alberta.ca/how-alberta-classifies-films.aspx
 - Implemented a Python file that pulls the sample data and populates existing tables
 ## Phase 3: SQL Queries and Reporting
 - Created 7 SQL files that manipulate existing tables into reports
