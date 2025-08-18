@@ -55,7 +55,7 @@
     <fields>
       <counter>
         <type>SoftwareIdeasModeler.Core.DiagramItems.Erd.ErdEntityAttribute</type>
-        <value>59</value>
+        <value>62</value>
       </counter>
     </fields>
   </counters>
@@ -82,6 +82,16 @@
         <description />
         <color>#00000000</color>
         <working-schedule uid="ws-b38f4da00a29486e8fe3c56c9a056655" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
+      </person>
+      <person id="">
+        <first-name>Nguyen</first-name>
+        <last-name>Uyen</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+        <working-schedule uid="ws-8e86eb0b4d4842fcaddc4a3190f7ff2e" hours="8" monday="8" tuesday="8" wednesday="8" thursday="8" friday="8" saturday="0" sunday="0" />
       </person>
       <person id="">
         <first-name>Nguyen</first-name>
@@ -170,6 +180,9 @@
         <attribute uid="ac6c18233c29c4cc581c83b8cd57c9f21987" cid="EA031" name="default_credit_card_nums" type="String" type-id="Uml.String" nullable="false" creation-date="08/16/2025 18:05:36" />
         <attribute uid="a7b6f76f8ee7c4250ba7544b6d18e8399206" cid="EA032" name="default_credit_card_type" type="String" type-id="Uml.String" nullable="false" creation-date="08/16/2025 18:05:53" />
         <attribute uid="a8b2a6132070945a09d42ce189426e6f921" cid="EA033" name="address" type="String" type-id="Uml.String" nullable="false" creation-date="08/16/2025 18:06:18" />
+        <attribute uid="a9d9fbe05ed4e46cf9ce7ec1097619037922" cid="EA059" name="city" type="String" type-id="Uml.String" nullable="false" creation-date="08/17/2025 20:32:17" />
+        <attribute uid="ab45b36d55b604d59bb53839f71c1eaa4405" cid="EA060" name="province" type="String" type-id="Uml.String" nullable="false" creation-date="08/17/2025 20:32:21" />
+        <attribute uid="a1ec2275db66c4df8aa2c01a454f0c9de347" cid="EA061" name="country" type="String" type-id="Uml.String" nullable="false" creation-date="08/17/2025 20:32:24" />
         <attribute uid="a7751680935a14fe6bfd112460e4a629c465" cid="EA034" name="postal_code" type="String" type-id="Uml.String" nullable="false" creation-date="08/16/2025 18:06:22" />
         <attribute uid="aaebe15e389f14c34b6f37e9d300b0235584" cid="EA035" name="phone_number" type="String" type-id="Uml.String" nullable="false" creation-date="08/16/2025 18:07:08" />
       </attributes>
@@ -266,13 +279,13 @@
               <attribute-pairs />
             </erd-relation>
           </item>
+          <item id="b6698dbd09e2408886736042f15ad5a0" cid="ENT007" type="erd-entity" name="Director" creator="" creation-date="08/10/2025 14:10:03">
+            <entity description="" />
+          </item>
           <item id="d2065c0147ec4bab967cc6d8d103ad93" cid="REL002" type="erd-relationship" name="subcategories" creator="" creation-date="08/10/2025 15:19:54" from="8d8f36aae0e44b9fa9cd99ed17b140d6" to="8d8f36aae0e44b9fa9cd99ed17b140d6">
             <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="0..*">
               <attribute-pairs />
             </erd-relation>
-          </item>
-          <item id="b6698dbd09e2408886736042f15ad5a0" cid="ENT007" type="erd-entity" name="Director" creator="" creation-date="08/10/2025 14:10:03">
-            <entity description="" />
           </item>
           <item id="bc435e32f8ed40c481e4b0622df02b83" cid="ENT006" type="erd-entity" name="ActorMovie" creator="" creation-date="08/10/2025 14:09:14">
             <entity description="" />
@@ -314,21 +327,21 @@
               <attribute-pairs />
             </erd-relation>
           </item>
-          <item id="0db9aa74d85144a6bfc8b0388cc3565d" cid="ENT008" type="erd-entity" name="Customer" creator="" creation-date="08/10/2025 14:10:09">
-            <entity description="" />
-          </item>
           <item id="0fc9324f22ed405cb7f731985ef83d04" cid="REL015" type="erd-relationship" creator="" creation-date="08/10/2025 15:57:32" from="bc4d8a9672fe41d18079668da38b79d8" to="bc435e32f8ed40c481e4b0622df02b83">
             <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="0..*" start-role="features">
               <attribute-pairs />
             </erd-relation>
           </item>
+          <item id="0db9aa74d85144a6bfc8b0388cc3565d" cid="ENT008" type="erd-entity" name="Customer" creator="" creation-date="08/10/2025 14:10:09">
+            <entity description="" />
+          </item>
+          <item id="68ba3f69bd16437e8ed39d6c34f5ec18" cid="ENT004" type="erd-entity" name="Rental" creator="" creation-date="08/10/2025 14:08:43">
+            <entity description="" />
+          </item>
           <item id="01b784252eaf481e99e053552aaf7a7b" cid="REL019" type="erd-relationship" creator="" creation-date="08/10/2025 16:00:23" from="8d8f36aae0e44b9fa9cd99ed17b140d6" to="bc4d8a9672fe41d18079668da38b79d8">
             <erd-relation type="Identifying" multiplicity-from="*" multiplicity-to="*" start-role="categorizes" end-role="is associated with">
               <attribute-pairs />
             </erd-relation>
-          </item>
-          <item id="68ba3f69bd16437e8ed39d6c34f5ec18" cid="ENT004" type="erd-entity" name="Rental" creator="" creation-date="08/10/2025 14:08:43">
-            <entity description="" />
           </item>
           <item id="df0ea5524e8143ff93675bee717ca94a" cid="REL021" type="erd-relationship" creator="" creation-date="08/10/2025 16:03:38" from="68ba3f69bd16437e8ed39d6c34f5ec18" to="bc4d8a9672fe41d18079668da38b79d8">
             <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="*" start-role="rents" end-role="is rented">
@@ -490,7 +503,7 @@
         <abstract-items />
         <layer id="0f7964dfdbad43048293fd84d355dfbf" name="Default" visible="true" enabled="true" locked="false" />
       </diagram>
-      <diagram type="entity-relationship" id="p87395cabcf8e48b9953fa9eeaa21f318_667145189" name="EntityRelationshipDiagram2" order-index="4" overview-order-index="2" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="-569,-382">
+      <diagram type="entity-relationship" id="p87395cabcf8e48b9953fa9eeaa21f318_667145189" name="EntityRelationshipDiagram2" order-index="4" overview-order-index="2" uid="" name-style="" auto-routed-paths="false" default-line-style="default" view-location="-305,-326" zoom="0.8">
         <style>
           <background-color index="1" color="#FFFFFFFF" />
           <background-color index="2" color="#FFFFFFFF" />
@@ -502,7 +515,7 @@
           </authors>
           <description />
           <creation-date>08/10/2025 16:49:26</creation-date>
-          <change-date>08/16/2025 21:31:46</change-date>
+          <change-date>08/17/2025 20:33:17</change-date>
           <revision-count>0</revision-count>
           <version />
         </meta>
@@ -534,8 +547,8 @@
               <attribute uid="a1672bfe36fcc47229f4235739a44b3c7881" cid="EA058" name="advisory_id" type="Integer" type-id="Uml.Integer" foreign-key="true" primary-key="true" nullable="false" creation-date="08/16/2025 18:16:19" />
             </attributes>
           </item>
-          <item id="35b31087f91b45f0b51c9ac353d35992" cid="CMT009" type="comment" style-class="Flat Light Green" creator="" creation-date="08/16/2025 18:40:17">
-            <style class="Flat Light Green" />
+          <item id="35b31087f91b45f0b51c9ac353d35992" cid="CMT009" type="comment" style-class="Flat Yellow" creator="" creation-date="08/16/2025 18:40:17">
+            <style class="Flat Yellow" />
             <comment>parent_category_id (FK) to Category</comment>
           </item>
           <item id="3bb787adcbb94e3b93b0d94badaa7de3" cid="ENT012" type="erd-entity" name="MovieDirector" creator="" creation-date="08/10/2025 16:52:19">
@@ -608,8 +621,8 @@ actor_id (FK)</comment>
             <comment>check contraints:
 - expiry_date &gt; start_view_date
 - start_vew_date &gt; rental_date
-- customer_rating: 1 to 5
-- credit_card_type IN ('AX','MC', 'VS')</comment>
+- customer_rating: CHECK BETWEEN 1 to 5
+- credit_card_type: CHECK IN ('AX','MC', 'VS')</comment>
           </item>
           <item id="6c321c4b82d6480ca84e3ccef458b7d1" cid="REL050" type="erd-relationship" creator="" creation-date="08/16/2025 18:29:43" from="898d4ec344e54aceaa5ed7bb7c473bab" to="c1e91a16c0cc4a659ed31ae821674969">
             <erd-relation type="Identifying" multiplicity-from="1" multiplicity-to="*">
@@ -636,16 +649,16 @@ category_id(FK)</comment>
               <attribute-pairs />
             </erd-relation>
           </item>
-          <item id="f92b66651ccf4d8498669e19aa56ae55" cid="CMT006" type="comment" creator="" creation-date="08/16/2025 18:38:13">
-            <comment>composite key:
-movie_id (FK)
-director_id (FK)</comment>
-          </item>
           <item id="3011ff94a19140778fdf828d39a6e755" cid="CMT011" type="comment" style-class="Flat Orange" creator="" creation-date="08/16/2025 21:27:45">
             <style class="Flat Orange" />
             <comment>check constraints:
 duration_minutes &gt; 0
 </comment>
+          </item>
+          <item id="f92b66651ccf4d8498669e19aa56ae55" cid="CMT006" type="comment" creator="" creation-date="08/16/2025 18:38:13">
+            <comment>composite key:
+movie_id (FK)
+director_id (FK)</comment>
           </item>
         </abstract-items>
         <layer id="e870dab183bd42cc9733b7204add967d" name="Default" visible="true" enabled="true" locked="false">
@@ -674,7 +687,7 @@ duration_minutes &gt; 0
             <erd-entity show-nullability="true" />
           </item>
           <item id="0b66205112454bf8b5fc592d0fb4c607" iid="d24865ebe28a4e0e8030509436e8d096" creation-date="08/10/2025 14:10:09" order-index="7" type="entity">
-            <layout ax="-314" ay="-188" awidth="258" aheight="255" x="-314" y="-188" width="258" height="255" />
+            <layout ax="-325" ay="-194" awidth="278" aheight="275" x="-325" y="-194" width="258" height="255" />
             <erd-entity show-nullability="true" />
           </item>
           <item id="08adb77468fd43d69a41e4fd4a2ca74d" iid="fe733d2b202e4c708edf60467edf87b4" creation-date="08/10/2025 14:10:03" order-index="6" type="entity">
@@ -764,9 +777,9 @@ duration_minutes &gt; 0
             <relation from="898d4ec344e54aceaa5ed7bb7c473bab" from-iid="b4e19231e51a46d4919be078d8995e87" to="1b537e0412724d218d496b352140c80d" to-iid="c53ae0e08d7a404e9f18454b318d8fc4" />
           </item>
           <item id="b0f65d3639644ef8863012f7f4d667b2" iid="a44eb3cf7cab4d69a5ea32a7c82eef6b" creation-date="08/16/2025 18:24:32" order-index="27" type="relation">
-            <layout start-role-position="25,15" end-role-position="25,-15" line-style="oblique" start-auto-side="false" end-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="-185" y1="67" x2="52" y2="105" start-border-pos="0.625" end-border-pos="0.8739837408065796" start-local-pos="122" end-local-pos="62" name-position="0,20">
+            <layout start-role-position="25,15" end-role-position="25,-15" line-style="oblique" start-auto-side="false" end-auto-side="false" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="-186" y1="81" x2="52" y2="105" start-border-pos="0.625" end-border-pos="0.8739837408065796" start-local-pos="122" end-local-pos="62" name-position="0,20">
               <points>
-                <point x="-185" y="67" />
+                <point x="-186" y="81" />
                 <point x="-185" y="107.5" />
                 <point x="52" y="105" />
               </points>
@@ -814,9 +827,9 @@ duration_minutes &gt; 0
             <relation from="4c97fa503e1343659be1cbf24040d786" from-iid="162aa677498f48aebb54cec5f18c090c" to="898d4ec344e54aceaa5ed7bb7c473bab" to-iid="b4e19231e51a46d4919be078d8995e87" />
           </item>
           <item id="2aa47cb5d7984422ae3f50ec4768a390" iid="e144e1bca67841049687794c62ff6b34" creation-date="08/16/2025 18:31:37" order-index="32" type="relation">
-            <layout start-role-position="25,15" end-role-position="25,-15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="-185" y1="-188" x2="52" y2="-223" start-border-pos="0.125" end-border-pos="0.9162843972444534" end-local-pos="73" name-position="0,20">
+            <layout start-role-position="25,15" end-role-position="25,-15" line-style="oblique" lock-start-point="true" lock-end-point="true" lock-to-fields="false" auto-path="" x1="-186" y1="-194" x2="52" y2="-223" start-border-pos="0.125" end-border-pos="0.9162843972444534" end-local-pos="73" name-position="0,20">
               <points>
-                <point x="-185" y="-188" />
+                <point x="-186" y="-194" />
                 <point x="-186" y="-226" />
                 <point x="52" y="-223" />
               </points>
@@ -836,10 +849,10 @@ duration_minutes &gt; 0
             <layout ax="618" ay="474" awidth="110" aheight="58" x="618" y="474" width="110" height="58" />
           </item>
           <item id="35b31087f91b45f0b51c9ac353d35992" iid="e9bae81bba374bfca1345dc1483f4887" creation-date="08/16/2025 18:40:17" order-index="37" type="entity">
-            <layout ax="1450" ay="246" awidth="126" aheight="58" x="1450" y="246" width="126" height="58" />
+            <layout ax="1417" ay="247" awidth="126" aheight="58" x="1417" y="247" width="126" height="58" />
           </item>
           <item id="d6e559fb18d6454eab695edffc6f5444" iid="5ae2ffc2e6cf4908a11c125b5f769f3b" creation-date="08/16/2025 20:41:21" order-index="38" type="entity">
-            <layout ax="67" ay="-410" awidth="228" aheight="93" x="67" y="-410" width="158" height="52" />
+            <layout ax="52" ay="-433" awidth="275" aheight="93" x="52" y="-433" width="158" height="52" />
           </item>
           <item id="ec24e68d77de41c8a718b5a0a9040161" iid="ae4e0b80848b4a03802c876453b9fb06" creation-date="08/16/2025 20:43:01" order-index="39" type="drawing-text">
             <layout ax="287" ay="190" awidth="250" aheight="43" x="287" y="190" width="250" height="43" />
