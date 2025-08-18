@@ -30,5 +30,5 @@ with sample data, and generating reports
 - OLAP – Analytical queries
 - Subqueries – Using queries within queries
 
-**4. Presentation**
+## Phase 4: Presentation
   DEMO:
